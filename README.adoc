@@ -1,0 +1,25 @@
+== SMDS - Sane MacOS Dev Setup
+
+Is a collection of scripts to install sane default development tools on MacOS without requiring admin privileges.
+
+MacOS has some insanely outdated software by default, e.g.
+
+[source,bash]
+----
+/bin/bash --version
+GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin19)
+Copyright (C) 2007 Free Software Foundation, Inc.
+----
+
+*SMDS* first installs _homebrew_, then uses it to install/upgrade
+
+* bash
+* go
+* node
+* ruby
+
+It adds the required `ENV` variables and `PATH` for _zsh_ and _bash_ for them to work in userspace.
+
+If you find this useful and want to contribute, please take a look at https://github.com/HMKnapp/github-actions-matrix-run-id/issues[open issues] to add more modules.
+
+Your pull requests are welcome!
