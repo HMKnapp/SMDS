@@ -2,14 +2,36 @@
 
 Is a collection of scripts to install sane default development tools on MacOS without requiring admin privileges.
 
-MacOS has some insanely outdated software by default, e.g.
+=== Why?
 
+. MacOS has some insanely outdated software by default, e.g.
++
 [source,bash]
 ----
 /bin/bash --version
 GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin19)
 Copyright (C) 2007 Free Software Foundation, Inc.
 ----
+
+. In corporate environments you usually do not have admin privileges. Your admin has better things to do than to come to your desk for every installation and update.
+
+. *SMDS* can be run unattended, automated because it doesn't ask stupid questions but uses sane defaults instead.
+
+=== How?
+
+.Usage
+[source,sh]
+----
+bash install.sh
+----
+
+.Install only one Module, e.g. Ruby
+[source,sh]
+----
+bash modules/install_ruby.sh
+----
+
+=== What?
 
 *SMDS* first installs _homebrew_, then uses it to install/upgrade
 
@@ -18,8 +40,13 @@ Copyright (C) 2007 Free Software Foundation, Inc.
 * node
 * ruby
 
-It adds the required `ENV` variables and `PATH` for _zsh_ and _bash_ for them to work in userspace.
+Each *SMDS* module takes care of adding the required `ENV` variables and `PATH` for _zsh_ and _bash_ for them to work in userspace.
 
-If you find this useful and want to contribute, please take a look at https://github.com/HMKnapp/github-actions-matrix-run-id/issues[open issues] to add more modules.
+=== And?
 
-Your pull requests are welcome!
+If you find this useful _and_ want to contribute, please take a look at https://github.com/HMKnapp/github-actions-matrix-run-id/issues[open issues] to add more modules.
+
+Testing *SMDS* on a fresh vanilla MacOS would also help greatly. Please https://github.com/HMKnapp/github-actions-matrix-run-id/issues[report any issues] you encountered.
+
+[.discrete]
+==== Your pull requests are welcome!
