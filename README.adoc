@@ -36,6 +36,7 @@ bash modules/install_ruby.sh
 *SMDS* first installs _homebrew_, then uses it to install/upgrade
 
 * bash
+* git
 * go
 * node
 * ruby
