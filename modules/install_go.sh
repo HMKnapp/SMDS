@@ -6,8 +6,8 @@ function _install {
   echo -n "Installing "
 
   brew install go &>/dev/null
-  echo 'export GOPATH=$HOME/.golang' | tee -a $HOME/.zprofile $HOME/.bash_profile
-  echo 'export PATH=$GOPATH/bin:$PATH' | tee -a $HOME/.zprofile $HOME/.bash_profile
+  echo 'export GOPATH=$HOME/.golang' | tee -a $HOME/.zprofile $HOME/.bash_profile &>/dev/null
+  echo 'export PATH=$GOPATH/bin:$PATH' | tee -a $HOME/.zprofile $HOME/.bash_profile &>/dev/null
   export GOPATH=$HOME/.golang
   export PATH=$GOPATH/bin:$PATH
 

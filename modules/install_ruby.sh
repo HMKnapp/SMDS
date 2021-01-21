@@ -10,8 +10,8 @@ function _install {
   [[ -n ${RUBY_VER} ]] || false
   export PATH="$HOME/homebrew/opt/ruby/bin:$PATH"
   export PATH="$HOME/homebrew/lib/ruby/gems/$RUBY_VER/bin:$PATH"
-  echo 'export PATH="$HOME/homebrew/lib/ruby/gems/'$RUBY_VER'/bin:$PATH"' | tee -a $HOME/.zprofile $HOME/.bash_profile
-  echo 'PATH="$HOME/homebrew/opt/ruby/bin:$PATH"' | tee -a $HOME/.zprofile $HOME/.bash_profile
+  echo 'export PATH="$HOME/homebrew/lib/ruby/gems/'$RUBY_VER'/bin:$PATH"' | tee -a $HOME/.zprofile $HOME/.bash_profile &>/dev/null
+  echo 'export PATH="$HOME/homebrew/opt/ruby/bin:$PATH"' | tee -a $HOME/.zprofile $HOME/.bash_profile &>/dev/null
 
   ruby --version
 }
