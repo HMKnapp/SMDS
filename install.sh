@@ -13,7 +13,10 @@ echo
 read -t 30 -p "Continues in 30 seconds or press Enter to continue now..."
 echo
 
-for m in modules/*; do source ${m} && _install; done
+export PATH="$HOME/homebrew/bin:$PATH"
+_workdir=$(pwd)
+for m in modules/*; do source ${m} && _install; cd ${_workdir}; done
 
 echo
 echo "All done"
+
