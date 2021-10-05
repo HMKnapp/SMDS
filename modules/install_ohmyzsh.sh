@@ -1,6 +1,6 @@
 #!/bin/bash
 set -E
-MODULE_NAME="ohmyzsh"
+MODULE_NAME="OhMyZsh"
 function _install {
   echo -n "Installing "
 
